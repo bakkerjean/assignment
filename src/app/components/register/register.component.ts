@@ -78,8 +78,8 @@ export class RegisterComponent {
     }
     // may not contain first or last name
     if (
-      this.formGroup.controls.firstName.value.length &&
-      this.formGroup.controls.firstName.value.length &&
+      (this.formGroup.controls.firstName.value.length ||
+        this.formGroup.controls.lastName.value.length) &&
       (password.includes(this.formGroup.controls.firstName.value) ||
         password.includes(this.formGroup.controls.lastName.value))
     ) {
@@ -92,7 +92,7 @@ export class RegisterComponent {
 
   emailValidator = (control: FormControl) => {
     const email = control.value;
-    // email verification (see readme)
+    // email validation (see readme)
     const regex = new RegExp(
       '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$'
     );
