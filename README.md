@@ -1,5 +1,19 @@
 # Assignment
 
+Improvements (to do):
+
+- add polyfills
+- increase test coverage
+- Register component: validate all fields again before onSubmit
+- improve error handling for register POST call (dependency on API responses)
+
+Notes on email validation:  
+Email validation regex according to https://www.w3.org/TR/2012/WD-html-markup-20120329/input.email.html  
+True email validation can only be done by user email verification approach.  
+For this reason it's better to error on the permissive side on the frontend as to not run the risk of rejecting valid email addresses.  
+
+# Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development server
