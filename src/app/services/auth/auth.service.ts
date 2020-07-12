@@ -15,7 +15,7 @@ export class AuthService {
   user: User;
 
   register(creds: Creds) {
-    return this.http.post(environment.loginUrl, creds);
+    return this.http.post(environment.registerUrl, creds);
   }
 
   getUser() {

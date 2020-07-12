@@ -6,7 +6,7 @@ import { AuthGuardService as AuthGuard } from '../../services/auth/auth-guard.se
 
 import { RegisterComponent } from './register.component';
 
-describe('LoginComponent', () => {
+describe('RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
 

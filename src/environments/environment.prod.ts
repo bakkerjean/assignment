@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  loginUrl: 'https://demo-api.now.sh/users',
+  registerUrl: 'https://demo-api.now.sh/users',
 };
