@@ -6,16 +6,16 @@ import { AuthService } from '../../services/auth/auth.service';
 import { Creds } from '../../types/creds';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
 })
-export class LoginComponent {
+export class RegisterComponent {
   constructor(public authService: AuthService, public router: Router) {}
-  title = 'Login';
+  title = 'Register';
 
-  login(creds: Creds) {
-    this.authService.login(creds).subscribe({
+  register(creds: Creds) {
+    this.authService.register(creds).subscribe({
       next: () => {
         this.authService.setUser({
           firstName: creds.firstName,

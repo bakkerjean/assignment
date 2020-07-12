@@ -4,22 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AuthGuardService as AuthGuard } from '../../services/auth/auth-guard.service';
 
-import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 
 describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+  let component: RegisterComponent;
+  let fixture: ComponentFixture<RegisterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [RegisterComponent],
       imports: [RouterTestingModule, HttpClientModule],
       providers: [AuthGuard],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -28,16 +28,16 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'Login'`, () => {
-    const fixture = TestBed.createComponent(LoginComponent);
+  it(`should have as title 'Register'`, () => {
+    const fixture = TestBed.createComponent(RegisterComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Login');
+    expect(app.title).toEqual('Register');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(LoginComponent);
+  it('should render register', () => {
+    const fixture = TestBed.createComponent(RegisterComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Login');
+    expect(compiled.querySelector('h1').textContent).toContain('Register');
   });
 });
